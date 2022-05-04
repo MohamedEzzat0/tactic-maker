@@ -1,0 +1,360 @@
+.playground-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-weight: 400;
+    color: var(--gray-color--4);
+    z-index: 1;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: none;
+}
+
+.playground-player.basic .player-number,
+.playground-player.basic .playground-name
+{
+    display: none;
+}
+
+.player-circle {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    background-color: var(--accent-color--orange);
+    display: none;
+}
+
+.draggable {
+    cursor: move;
+}
+
+.player-shirt {
+    position: relative;
+}
+
+.player-shirt.circle .player-shirt-icon{
+    display: none;
+}
+.player-shirt.circle .player-circle {
+    display: block;
+}
+.player-shirt.circle .option {
+    transform: translate(-50%, -60%) !important
+}
+
+.player-shirt-icon {
+    font-size: 3.2em;
+    color: #fd7e14;
+}
+
+.player-number {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.playground-name {
+    text-align: center;
+    background: none;
+    border: none;
+    font-size: 1.6em;
+    color: #212529;
+    font-family: inherit;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.playground-name::placeholder {
+    color: #212529;
+}
+
+.playground-name:focus {
+    outline: none;
+    background-color: #FAB005;
+}
+
+.option {
+    background-color: #ced4da;
+    padding: 0.6em 1.2em;
+    border-radius: 5000px;
+    position: absolute;
+    top: -80%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.6em;
+    cursor: default;
+    z-index: 1000;
+}
+
+.option::before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    transform: rotate(45deg) translate(0%, 70%);
+    background-color: #ced4da;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 500;
+    border-radius: 2px;
+}
+
+.option-button {
+    font-size: 1.8em;
+    color: #333;
+    cursor: pointer;
+}
+
+.active .option {
+    display: flex;
+}
+
+.option-button {
+    background: none;
+    border: none;
+}
+
+.player-name {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!*/
+/* CARDS STYLE */
+/*!!!!!!!!!!!!!!!!!!!!!!*/
+.cards-container {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+}
+
+.player-card {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0.8rem;
+    border-bottom: 2px solid var(--gray-color--1);
+}
+
+.shirt--card {
+    font-size: 4.8rem;
+    color: #2f9e44;
+}
+
+.player-name--card {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+}
+
+.player-position--card {
+    font-size: 1.4rem;
+    color: var(--gray-color--3);
+}
+
+.card-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.option--card {
+    margin-left: auto;
+    color: #868e96;
+    font-size: 3.2rem;
+    cursor: pointer;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!*/
+/* CONE STYLE */
+/*!!!!!!!!!!!!!!!!!!!!!!*/
+.playground-cone {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    }
+
+.cone-icon {
+    border: none;
+    background: none;
+    width: 4.4rem;
+    height: 4.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.cone-icon .cone {
+    color: #e73b2d;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!*/
+/* Line STYLE */
+/*!!!!!!!!!!!!!!!!!!!!!!*/
+.line,
+.line-s{
+    width: 100px;
+    height: 5px;
+    background-color: #212529;
+    position: absolute;
+    top: 65px;
+    left: 45px;
+    z-index: 0;
+    /*transform: translate(-50%, -50%);*/
+}
+
+.line-s {
+    display: none;
+    width: 0;
+    top: -5000px;
+}
+
+.line-s.follow {
+    display: block;
+}
+
+.dashed {
+    height: 0;
+    /*background: none;*/
+    background-color: transparent;
+    border-top: 6px dashed #212529;
+}
+
+.line-ending {
+    color: #212529;
+    font-size: 3.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -42%) rotate(90deg);
+    display: none;
+}
+
+.dashed .line-ending {
+    transform: translate(-50%, -58%) rotate(90deg);
+}
+
+.line-ending.enable {
+    display: block;
+}
+
+.tri-ending {
+    transform: translate(-50%, -42%) rotate(30deg);
+}
+
+.dashed .tri-ending {
+    transform: translate(-50%, -58%) rotate(30deg);
+}
+
+
+.x-ending {
+    width: 0.5rem;
+    height: 3rem;
+    background-color: #212529;
+    border-radius: 100px;
+    transform: translate(-50%, -42%) rotate(45deg);
+
+}
+
+.x-ending:before{
+    content: '';
+    width: 0.5rem;
+    height: 3rem;
+    border-radius: 100px;
+    background-color: inherit;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.dashed .x-ending {
+    transform: translate(-50%, -58%) rotate(45deg);
+}
+
+.circle-ending {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    /*background-color: #fff;*/
+    border: 0.5rem solid #212529;
+    transform: translate(-85%, -42%) rotate(90deg);
+
+}
+
+.dashed .circle-ending {
+    transform: translate(-85%, -58%) rotate(90deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!*/
+/* TEXT STYLE */
+/*!!!!!!!!!!!!!!!!!!!!!!*/
+.text {
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.text--input {
+    border: none;
+    background-color: #FAB005;
+    border-radius: 8px;
+    font-family: inherit;
+    color: #212529;
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text--input:focus {
+    outline: none;
+}
+
+.text--input::placeholder{
+    color: #e9ecef;
+}
+
+.text--input:disabled {
+    background:none;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!*/
+/* RECT STYLE */
+/*!!!!!!!!!!!!!!!!!!!!!!*/
+.rect {
+    background-color: rgba(0, 119, 238, 0.5);
+    border: 5px solid #0077ee;
+    width: 100px;
+    height: 100px;
+    top: 30px;
+    left: 30px;
+
+    position: absolute;
+    /*transform: translate(-50%, -50%);*/
+}
+
+.rect-option {
+    top: -50px;
+}

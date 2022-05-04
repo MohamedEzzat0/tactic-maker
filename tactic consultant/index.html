@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+    />
+
+    <title>Lineup builder-make best lineup for your team</title>
+
+    <link rel="stylesheet" href="css/general.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/dark.css"/>
+    <link rel="stylesheet" href="css/tool.css"/>
+    <link rel="stylesheet" href="css/quieries.css"/>
+
+</head>
+<body>
+<div class="grid">
+    <div class="container">
+        <div class="stadium">
+<!--            <input type="text" name="tactic-name" id="title" placeholder="Lineup title" class="lineup-title">-->
+            <img src="img/stadium4.png" alt="stadium" class="playground"/>
+            <div class="player-container">
+                <!--<div class="draggable playground-player field-player active" id="player">
+                    <div class="option">
+                        <button class="option-button delete-player-btn"><i class="ph-trash option-icon"></i></button>
+                        <button class="option-button"><i class="ph-person-simple-run option-icon"></i></button>
+                        <label for="player-name">
+                            <span class="option-button"><i class="ph-swap option-icon"></i></span>
+                        </label>
+                    </div>
+                    <div class="player-shirt circle">
+                        <i class="ph-t-shirt-fill player-shirt-icon"></i>
+                        <div class="player-circle"></div>
+                        <span class = "player-number">15</span>
+                    </div>
+                    <input id="player-name" class="playground-name" placeholder="Mo Ezzat" value="Mo Ezzat" maxlength="20"/>
+                </div>-->
+            </div>
+            <!--<div class="draggable playground-cone">
+                <div class="option cone-option">
+                    <button class="option-button delete-player-btn"><i class="ph-trash option-icon"></i></button>
+                    <button class="option-button delete-player-btn"><i class="ph-lock-fill option-icon"></i></button>
+                </div>
+                <div class=" cone-icon">
+                    <i class="ph-traffic-cone-fill tool-icon cone"></i>
+                </div>
+            </div>-->
+            <!--<div class="text">
+                <input type="text" class="text&#45;&#45;input" placeholder="Add some text here">
+            </div>-->
+            <!--<div class="rect">
+                <div class="option cone-option rect-option">
+                    <button class="option-button delete-player-btn"><i class="ph-trash option-icon"></i></button>
+                    <button class="option-button delete-player-btn"><i class="ph-lock-fill option-icon"></i></button>
+                </div>
+            </div>-->
+            <div class="line-s" id="base-line">
+                <i class="ph-triangle-fill tri-ending line-ending  enable"></i>
+                <div class="x-ending line-ending "></div>
+                <div class="circle-ending line-ending"></div>
+            </div>
+            <div class="ball draggable">
+                <i class="ph-soccer-ball-fill ball-icon"></i>
+            </div>
+        </div>
+
+        <!-- SETTING SECTION -->
+        <div class="setting box box--top-left">
+            <button class="setting-btn btn">
+                <i class="ph-gear-fill setting-btn--icon"></i>
+            </button>
+            <div class="setting-container">
+                <p class="setting-heading">Setting</p>
+                <ul class="setting-items list">
+                    <li class="setting-item dark-mode">
+                        <p class="setting-title">Dark mode</p>
+                        <div class="toggle-btn"></div>
+                    </li>
+                    <li class="setting-item">
+                        <p class="setting-title">Stadium setting</p>
+                        <i class="ph-caret-right-bold setting-icon--item"></i>
+                    </li>
+                    <li class="setting-item player-setting">
+                        <p class="setting-title">Player setting</p>
+                        <i class="ph-caret-right-bold setting-icon--item"></i>
+                    </li>
+                    <li class="setting-item reset-stadium">
+                        <p class="setting-title">Reset stadium</p>
+                        <i class="ph-trash-fill setting-icon--item"></i>
+                    </li>
+                    <li class="">
+                        <a href="#" class="downloadable setting-item">
+                            <p class="setting-title">How to use app</p>
+                            <i class="ph-info-fill setting-icon--item"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="setting-container sub-setting hidden ">
+                <p class="setting-heading sub-setting-heading player-setting">
+                    <i class="ph-caret-left-bold sub-setting-heading--icon"></i>
+                    <span>Player setting</span>
+                </p>
+                <ul class="setting-items list sub-setting--content">
+                    <li class="sub-setting-item">
+                        <div class="setting-item">
+                            <p class="setting-title"> shape</p>
+                            <i class="ph-caret-down-bold setting-icon--item"></i>
+                        </div>
+                        <div class="sub-setting-item--content">
+                            <div class="setting-choose">
+                                <input type="radio" class="player-setting-el" name="player-setting--shape" id="choose1" value="circle" checked>
+                                <label for="choose1" class="tool-btn">
+                                    <span class="player-circle" style="display: inline"></span>
+                                </label>
+                            </div>
+                            <div class="setting-choose">
+                                <input type="radio" class="player-setting-el" name="player-setting--shape" id="choose2" value="jersey">
+                                <label for="choose2" class="tool-btn">
+                                    <i class="ph-t-shirt-fill player-shirt-icon"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sub-setting-item">
+                        <div class="setting-item">
+                        <p class="setting-title"> details</p>
+                        <i class="ph-caret-down-bold setting-icon--item"></i>
+            </div>
+                        <div class="sub-setting-item--content">
+                            <div class="setting-choose">
+                                <input type="radio" class="player-setting-el" name="player-setting--details" id="details1" value="basic" checked>
+                                <label for="details1" class="tool-btn">
+                                    <i class="ph-t-shirt-fill player-shirt-icon"></i>
+                                </label>
+                            </div>
+                            <div class="setting-choose">
+                                <input type="radio" class="player-setting-el" name="player-setting--details" id="details2" value="pro">
+                                <label for="details2" class="tool-btn">
+                                    <div class="player-setting-details--pro">
+                                        <div class="playground-player-setting">
+                                            <div class="player-shirt">
+                                                <i class="ph-t-shirt-fill player-shirt-icon"></i>
+                                                <div class="player-circle"></div>
+                                                <span class = "player-number">15</span>
+                                            </div>
+                                            <span class="playground-name"> name </span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="setting-item">
+                        <label class="setting-title" for="player-size"> size</label>
+                        <input type="range" name="player-size" id="player-size" class="player-size" min="50" max="135"
+                               value="100">
+                    </li>
+                </ul>
+            </div>
+            <div class="setting-container sub-setting hidden ">
+                <p class="setting-heading sub-setting-heading player-setting">
+                    <i class="ph-caret-left-bold sub-setting-heading--icon"></i>
+                    <span>Player setting</span>
+                </p>
+                <ul class="setting-items list sub-setting--content">
+                    <li class="sub-setting-item">
+                        <div class="setting-item">
+                            <p class="setting-title"> shape</p>
+                            <i class="ph-caret-down-bold setting-icon--item"></i>
+                        </div>
+                        <div class="sub-setting-item--content">
+                            <div class="setting-choose">
+                                <input type="radio" class="player-setting-el" name="player-setting--shape" id="background1" value="circle" checked>
+                                <label for="choose1" class="tool-btn">
+                                    <span class="player-circle" style="display: inline"></span>
+                                </label>
+                            </div>
+                            <div class="setting-choose">
+                                <input type="radio" class="player-setting-el" name="player-setting--shape" id="background2" value="jersey">
+                                <label for="choose2" class="tool-btn">
+                                    <i class="ph-t-shirt-fill player-shirt-icon"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sub-setting-item">
+                        <div class="setting-item">
+                            <p class="setting-title"> details</p>
+                            <i class="ph-caret-down-bold setting-icon--item"></i>
+                        </div>
+                        <div class="sub-setting-item--content">
+                            <div class="setting-choose">
+                                <input type="radio" class="player-setting-el" name="player-setting--details" id="details1" value="basic" checked>
+                                <label for="details1" class="tool-btn">
+                                    <i class="ph-t-shirt-fill player-shirt-icon"></i>
+                                </label>
+                            </div>
+                            <div class="setting-choose">
+                                <input type="radio" class="player-setting-el" name="player-setting--details" id="details2" value="pro">
+                                <label for="details2" class="tool-btn">
+                                    <div class="player-setting-details--pro">
+                                        <div class="playground-player-setting">
+                                            <div class="player-shirt">
+                                                <i class="ph-t-shirt-fill player-shirt-icon"></i>
+                                                <div class="player-circle"></div>
+                                                <span class = "player-number">15</span>
+                                            </div>
+                                            <span class="playground-name"> name </span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="setting-item">
+                        <label class="setting-title" for="player-size"> size</label>
+                        <input type="range" name="player-size" id="player-size" class="player-size" min="50" max="135"
+                               value="100">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TOOLS AND COLORS SECTION -->
+        <div class="tools box box--bottom-left">
+
+            <!-- TOOLS SECTION -->
+            <div class="tools-container">
+                <ul class="tools-items list">
+                    <li class="tool-item ">
+                        <input type="radio" name="tool" id="tool1" value="shirt">
+                        <label for="tool1" class="tool-btn active">
+                            <i class="ph-t-shirt-fill tool-icon shirt"></i>
+                        </label>
+                    </li>
+                    <li class="tool-item">
+                        <input type="radio" name="tool" id="tool2" value="cone">
+                        <label for="tool2" class="tool-btn">
+                            <i class="ph-traffic-cone-fill tool-icon cone"></i>
+                        </label>
+                    </li>
+                    <li class="tool-item line-tool">
+                        <input type="radio" name="tool" id="tool3" value="line" class="line-tool-input">
+                        <label for="tool3" class="tool-btn line-tool-label">
+                            <i class="ph-line-segment-bold tool-icon line-icon"></i>
+                        </label>
+                        <div class="tool-option tool-option--line">
+                            <div class="line-option--shape">
+                                <input type="radio" name="line-shape" id="solid-line" value="" checked>
+                                <label for="solid-line" class=tool-option-btn">
+                                    <div class="solid-line"></div>
+                                </label>
+                                <input type="radio" name="line-shape" id="dashed-line" value="dashed">
+                                <label for="dashed-line" class="tool-option-btn">
+                                    <div class="dashed-line"></div>
+                                </label>
+                            </div>
+                            <div class="line-option--ending">
+                                <input type="radio" name="line-ending" id="circle-ending" value="tri" checked>
+                                <label for="circle-ending" class="tool-option-btn">
+                                    <i class="ph-triangle-fill line-option--icon"></i>
+                                </label>
+                                <input type="radio" name="line-ending" id="tri-ending" value="x">
+                                <label for="tri-ending" class="tool-option-btn">
+                                    <i class="ph-x-bold line-option--icon"></i>
+                                </label>
+                                <input type="radio" name="line-ending" id="x-ending" value="circle">
+                                <label for="x-ending" class="tool-option-btn">
+                                    <i class="ph-circle-bold line-option--icon"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tool-item">
+                        <input type="radio" name="tool" id="tool4" value="rect">
+                        <label for="tool4" class="tool-btn">
+                            <i class="ph-rectangle-bold tool-icon rectangle"></i>
+                        </label>
+                    </li>
+                    <li class="tool-item">
+                        <input type="radio" name="tool" id="tool6" value="text">
+                        <label for="tool6" class="tool-btn">
+                            <i class="ph-text-t-bold tool-icon text-icon"></i>
+                        </label>
+                    </li>
+                    <li class="tool-item">
+                        <input type="radio" name="tool" id="tool5" value="pen">
+                        <label for="tool5" class="tool-btn">
+                            <i class="ph-pencil-fill tool-icon pencil"></i>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- COLORS SECTION -->
+            <div class="add-color">
+                <button class="add-btn btn">
+                    <i class="ph-plus-fill"></i>
+                </button>
+                <div class="colors-container">
+                    <ul class="colors list">
+                        <li class="color">
+                            <input
+                                    type="radio"
+                                    name="color"
+                                    value="#e73b2d"
+                                    id="red"
+                                    class="color-btn color-btn--red"
+                            />
+                            <!-- <label for="red" class="color-btn color-btn--red">&nbsp;</label> -->
+                        </li>
+                        <li class="color">
+                            <input
+                                    type="radio"
+                                    name="color"
+                                    value="#fd7e14"
+                                    id="orange"
+                                    class="color-btn color-btn--orange"
+                                    checked
+                            />
+                            <!-- <label for="orange" class="color-btn color-btn--orange"
+                              >&nbsp;</label
+                            > -->
+                        </li>
+                        <li class="color">
+                            <input
+                                    type="radio"
+                                    name="color"
+                                    value="#0077ee"
+                                    id="blue"
+                                    class="color-btn color-btn--blue"
+                            />
+                            <!-- <label class="color-btn color-btn--blue" for="blue"
+                              >&nbsp;</label
+                            > -->
+                        </li>
+                        <li class="color">
+                            <input
+                                    type="radio"
+                                    name="color"
+                                    value="#fcc419"
+                                    id="yellow"
+                                    class="color-btn color-btn--yellow"
+                            />
+                        </li>
+                        <li class="color">
+                            <input
+                                    type="radio"
+                                    name="color"
+                                    value="#1e7f8d"
+                                    id="oblique"
+                                    class="color-btn color-btn--oblique"
+                            />
+                            <!-- <label for="oblique" class="color-btn color-btn--oblique"
+                              >&nbsp;</label
+                            > -->
+                        </li>
+                        <li class="color">
+                            <input
+                                    type="radio"
+                                    name="color"
+                                    value="#212529"
+                                    id="black"
+                                    class="color-btn color-btn--black"
+                            />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- BUTTON TO OPEN ASIDE BAR -->
+        <button class="control-aside">
+            <i class="ph-caret-left-bold arr-open"></i>
+            <i class="ph-caret-right-bold arr-close"></i>
+        </button>
+    </div>
+    <div class="cards-container">
+        <h1 class="aside-heading">Players</h1>
+        <div class="cards">
+            <!-- <div class="player-card" id="card&#45;&#45;player2">
+                 <div class="player-shirt">
+                     <i class="ph-t-shirt-fill player-shirt-icon shirt&#45;&#45;card"></i>
+                     <span class = "player-number">15</span>
+                 </div>
+                 <div class="card-data">
+                     <p class="player-name&#45;&#45;card">Mo Ezzat</p>
+                     <p class="player-position&#45;&#45;card">Position of player</p>
+                 </div>
+                 <i class="ph-dots-three-outline-vertical-fill option&#45;&#45;card"></i>
+             </div>-->
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+<script src="js/main.js" defer type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+</body>
+</html>

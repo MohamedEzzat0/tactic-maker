@@ -1,0 +1,35 @@
+.dark {
+    --body-background-color: #212529;
+    /*--tools-background: rgba(178, 242, 187, 54%);*/
+    --tools-background: #274432;
+    --gray-color--1: #f8f9fa;
+    --gray-color--2: #343a40;
+    --gray-color--3: #c4c4c4;
+    --gray-color--4: #f8f9fa;
+    --gray-color--5: #e5e5e5;
+    --aside-white: #343A40;
+    --btn-hover:  hsl(0, 0%, 30%);
+    --setting-btn-bg: rgba(33, 37, 41, 0.5);
+}
+
+/*.dark .btn:hover {*/
+/*    background: rgba(80, 83, 86, 0.5);*/
+/*}*/
+
+.dark .shirt,
+.dark .cone,
+.dark .line-icon,
+.dark .pencil,
+.dark .rectangle,
+.dark .line-option--icon{
+    color: var(--gray-color--4);
+}
+
+.dark .solid-line {
+    background-color: var(--gray-color--4);
+}
+
+.dark .dashed-line {
+    border-top: 0.5rem dashed var(--gray-color--4);;
+}
+
